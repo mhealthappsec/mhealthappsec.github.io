@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://wot19submission.github.io/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Mobile Apps Chains of Implicit Trust</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="./index_files/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="./index_files/bootstrap-theme.min.css">
+<script type="text/javascript" src="./index_files/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="./index_files/bootstrap.min.js"></script>
+<style>
+/* Bootstrap overrides */
+body {
+  /*min-height: 1000px;*/
+  padding-top: 70px;
+}
+
+.navbar-default {
+  height: 65px;
+}
+
+.navbar-default
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 65px;
+  font-size: 18pt;
+}
+
+.navbar-nav > li > a {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 65px;
+  font-size: 16pt;
+}
+
+</style>
+
+<script src="./index_files/jquery-3.1.1.min.js"></script>
+<script src="./index_files/highcharts.js"></script>
+<script src="./index_files/data.js"></script>
+<script src="./index_files/exporting.js"></script>
+
+<!-- Additional files for the Highslide popup effect -->
+<script src="./index_files/highslide-full.min.js"></script>
+<script src="./index_files/highslide.config.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="./index_files/highslide.css">
+
+
+<script>
+	// Get the CSV and create the chart
+	//$.getJSON('based.json', function (chart) {
+	//	Highcharts.chart('plot', chart);
+	//});
+  $.getJSON('corr.json', function (chart) {
+		Highcharts.chart('plotcorr', chart);
+	});
+  $.getJSON('daytoday.json', function (chart) {
+    Highcharts.chart('plotdaytoday', chart);
+	});
+
+</script>
+
+
+<style type="text/css">.highslide img {cursor: url(https://www.highcharts.com/highslide/graphics/zoomin.cur), pointer !important;}.highslide-viewport-size {position: fixed; width: 100%; height: 100%; left: 0; top: 0}</style></head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <a href="https://mobapptrust.github.io/index.html" class="navbar-brand">Mobile App's Chains of Implicit Trust Study</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav ">
+                  <li><a href="https://mobapptrust.github.io/#about">About</a></li>
+                  <li><a href="https://mobapptrust.github.io/#download">Downloads</a></li>
+                  <li><a href="https://mobapptrust.github.io/#contact">Contact</a></li>
+                  <li><a href="https://mobapptrust.github.io/#rpartners">Collaboration</a></li>
+              </ul>
+              <!--<ul class="nav navbar-nav navbar-right">
+                  <li class="mylogo"><a><img src="TU_Muenchen_Logo.svg" height=40px"/></a>&nbsp;</li>
+                  <li class="mylogo"><a><img src="rwth_comsys_bild_rgb.svg" height="40px"/></a>&nbsp;</li>
+                  <li class="mylogo"><a><img src="Usyd_new_logo.png" height="40px"/></a>&nbsp;</li>
+                  <li class="mylogo"><a><img src="neu.png" height="40px"/></a></li>
+              </ul>-->
+              <a href="https://github.com/mobapptrust/mobapptrust.github.io"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:999;" src="./index_files/forkme_right_orange_ff7600.png" alt="Fork me (if you wish) on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" "=""></a>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
+
+    <div class="container">
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+
+        <div class="page-header">
+
+<h2 id="about">About this Study</h2>
+<p style="font-size: 16px">
+  <br>
+
+In this project, we aim to investigate whether and what user data is collected by health-related mobile applications (mHealth apps), to characterise the privacy conduct of all the available on Google Play mHealth apps, and to gauge the associated privacy risks. To this end, we design an automated data crawling, analysis of the static source code and apps' files/codes as well as run-time network traffic, and analysis of public app reviews.
+<br><br>
+On Google Play store, we found 20,991 mHealth apps which included 15,838 free apps (requiring neither download nor subscription costs) and 5,159 paid apps. We found that 88% of mHealth apps collect/share user data. 16.8% of the detected data-collection practices, are towards the app developers (first-party), while 83.2% are towards external services providers (third-parties). A small number of third-parties (including popular services, like Google and Facebook) received 67.8% of the collected data. 23% of privacy leaks occur on insecure communications protocols. 20% of apps provide no privacy policies, while only 47% of data leaks are compliant with the practices disclosed by in the privacy policy. Less than 2% of users' reviews raised privacy concerns.
+<br><br>
+Our large-scale analysis of mHealth apps surfaced serious privacy issues, with limited awareness of app users. It is important for clinicians to articulate these to patients, in order to be able to accurately weigh the benefits and risks of the apps.
+
+<br><br>
+</p>
+<br>
+<h2 id="download">Paper and Dataset Download</h2>
+<p style="font-size: 16px">
+Our paper is submitted to the JAMIA Journal, 2021. You can contact us on the following email for if you want to use our collected dataset, analysis scripts, or interested in our full paper.
+
+<br>
+</p>
+
+
+<p style="font-size: 16px">
+
+A sample of <a href="https://drive.google.com/open?id=1kzcYWj_JDBmDXUD4Rko3LMpjoVmV_cpm"> dataset</a> and <a href="https://drive.google.com/open?id=1nJ4pKy5hihj0ZFrJNgT75tg77EB-ZlJS"> scripts</a> used in this paper is hosted at on Google Drive.<br><br>
+</p>
+
+<h2 id="contact">Contact Person</h2><br>
+Please contact us on the following email for if you need help in using our dataset and scripts.
+<br><br>
+<p style="font-size: 16px">
+	<b>Mobapptrust</b>: mhealthappsec [at] yahoo.com or gioacchino.tangari[at]mq.edu.au or muhammad.ikram[at]mq.edu.au
+
+</p>
+
+<h2 id="rpartner">Collaboration</h2>
+<p style="font-size: 16px">
+<ul>
+  <li><a href="https://uk.linkedin.com/in/gioacchino-tangari-7b362310b">Gioacchino Tangari</a><a></a></li><a>
+    <li><a href="https://scholar.google.com/citations?user=X-bsAP0AAAAJ&hl=en">iWayanBudi Sentana</a></li>
+  </a><li><a> </a><a href="https://researchers.mq.edu.au/en/persons/muhammad-ikram">Muhammad Ikram</a></li> 
+  <li><a href="https://researchers.mq.edu.au/en/persons/kiran-ijaz">Kiran Ijaz</a></li>
+  <li><a href="https://dali-kaafar.github.io/">Dali Kaafar</a></li> 
+  <li> <a href="https://researchers.mq.edu.au/en/persons/shlomo-berkovsky">Shlomo Berkovsky</a></li>
+  
+</ul>
+
+    </div>  <!-- col -->
+  </div>  <!-- row -->
+
+    </div> <!-- /container -->
+
+
+
+</div><div class="highslide-container" style="padding: 0px; border: none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001; direction: ltr;"><a class="highslide-loading" title="Click to cancel" href="javascript:;" style="position: absolute; top: -9999px; opacity: 0.75; z-index: 1;">Loading...</a><div style="display: none;"></div><div class="highslide-viewport highslide-viewport-size" style="padding: 0px; border: none; margin: 0px; visibility: hidden;"></div><table cellspacing="0" style="padding: 0px; border: none; margin: 0px; visibility: hidden; position: absolute; border-collapse: collapse; width: 0px;"><tbody style="padding: 0px; border: none; margin: 0px;"><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.highcharts.com/highslide/graphics/outlines/rounded-white.png&quot;) 0px 0px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.highcharts.com/highslide/graphics/outlines/rounded-white.png&quot;) 0px -40px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.highcharts.com/highslide/graphics/outlines/rounded-white.png&quot;) -20px 0px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.highcharts.com/highslide/graphics/outlines/rounded-white.png&quot;) 0px -80px; height: 20px; width: 20px;"></td><td class="rounded-white highslide-outline" style="padding: 0px; border: none; margin: 0px; position: relative;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.highcharts.com/highslide/graphics/outlines/rounded-white.png&quot;) -20px -80px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.highcharts.com/highslide/graphics/outlines/rounded-white.png&quot;) 0px -20px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.highcharts.com/highslide/graphics/outlines/rounded-white.png&quot;) 0px -60px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.highcharts.com/highslide/graphics/outlines/rounded-white.png&quot;) -20px -20px; height: 20px; width: 20px;"></td></tr></tbody></table><img src="./index_files/rounded-white.png" style="padding: 0px; border: none; margin: 0px; position: absolute; top: -9999px;"></div></body></html>
