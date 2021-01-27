@@ -106,11 +106,13 @@ body {
 <p style="font-size: 16px">
   <br>
 
-In this project, we aim to investigate whether and what user data is collected by health-related mobile applications (mHealth apps), to characterise the privacy conduct of all the available on Google Play mHealth apps, and to gauge the associated privacy risks. To this end, we design an automated data crawling, analysis of the static source code and apps' files/codes as well as run-time network traffic, and analysis of public app reviews.
+We present a large-scale security analysis of mHealth apps, performed through automated app collection and analysis tools on more than 20,000 mHealth apps available on Google Play and accessible from Australia. Our goal is to provide a comprehensive view of mHealth app security, spanning from the verification of app sources and protection of app communications, to the presence of malicious activities in the apps and the risks of over-privileged apps.
 <br><br>
-On Google Play store, we found 20,991 mHealth apps which included 15,838 free apps (requiring neither download nor subscription costs) and 5,159 paid apps. We found that 88% of mHealth apps collect/share user data. 16.8% of the detected data-collection practices, are towards the app developers (first-party), while 83.2% are towards external services providers (third-parties). A small number of third-parties (including popular services, like Google and Facebook) received 67.8% of the collected data. 23% of privacy leaks occur on insecure communications protocols. 20% of apps provide no privacy policies, while only 47% of data leaks are compliant with the practices disclosed by in the privacy policy. Less than 2% of users' reviews raised privacy concerns.
+
+Our analysis found that mHealth apps are still far from offering robust security guarantees. Notably, 2.8% of mHealth apps package suspicious codes (e.g., trojan). Moreover, 45% of mHealth apps rely on unencrypted communication, and as much as 23% of personal data (e.g., gps location) is sent on plaintext traffic. Users reviews reveal that mHealth app users are largely unaware of the security issues surfaced in this work.
 <br><br>
-Our large-scale analysis of mHealth apps surfaced serious privacy issues, with limited awareness of app users. It is important for clinicians to articulate these to patients, in order to be able to accurately weigh the benefits and risks of the apps.
+
+App users, clinicians, technology developers, and policy-makers should be cognisant of the uncovered security vulnerabilities and weigh them carefully against the benefits offered by the apps.
 
 <br><br>
 </p>
